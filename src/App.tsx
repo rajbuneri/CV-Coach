@@ -3,7 +3,7 @@ import {
   FileText, Sparkles, Send, Download, Briefcase, GraduationCap, 
   Settings, Award, RefreshCw, FileCheck2, UserCheck, Trash2, 
   Plus, Check, HelpCircle, ArrowRight, BookOpen, AlertCircle, 
-  MapPin, Phone, Mail, Link as LinkIcon, Star, Code2, Copy, Printer
+  MapPin, Phone, Mail, Link as LinkIcon, Star, Code2, Copy, Printer, Calendar
 } from "lucide-react";
 import { 
   ResumeData, PersonalInfo, ExperienceItem, EducationItem, 
@@ -15,159 +15,427 @@ import ResumePreview from "./components/ResumePreview";
 // Professional Sample Data for quick preview & mock state
 const sampleResumeData: ResumeData = {
   personalInfo: {
-    name: "Sarah M. Jenkins",
-    email: "sarah.jenkins@example.com",
-    mobile: "+1 (415) 882-9012",
-    location: "San Francisco, CA",
-    linkedin: "linkedin.com/in/sarahjenkins",
-    website: "sarahcreates.dev",
-    jobTitle: "Senior Product Manager"
+    name: "Eng. Faisal Al-Harbi",
+    email: "faisal.alharbi@kaust.edu.sa",
+    mobile: "+966 50 123 4567",
+    location: "Riyadh, Saudi Arabia",
+    linkedin: "linkedin.com/in/faisal-alharbi-pmp",
+    website: "faisal-pm.sa",
+    jobTitle: "PMO Director & Vision 2030 Strategist"
   },
-  summary: "Results-driven Senior Product Manager with 6+ years of experience leading cross-functional teams to engineer and scale enterprise SaaS platforms. Proven expert in user growth conversion optimization, agile roadmapping, and data-backed product strategy.",
+  summary: "Structured, impact-driven Senior Project Management Officer (PMO) with 8+ years of expertise directing large-scale infrastructure and digital transformation schemes in Saudi Arabia. Proven success steering multi-million SAR initiatives, aligning departmental KPIs with Saudi Vision 2030 strategic pillars, and mentoring high-performance Saudi national talent under Nitaqat guidelines.",
   experience: [
     {
       id: "exp_1",
-      company: "Stripe Inc.",
-      role: "Lead Product Manager",
-      location: "San Francisco, CA",
-      startDate: "Oct 2022",
+      company: "NEOM Authority",
+      role: "Director of Infrastructure Delivery (PMO)",
+      location: "NEOM, Saudi Arabia",
+      startDate: "Oct 2023",
       endDate: "Present",
       current: true,
       bulletPoints: [
-        "Led product strategy for billing integration API, increasing merchant onboarding velocity by 34% within 6 months.",
-        "Collaborated with 18+ multi-disciplinary developers and designers to launch customizable checkout widgets, boosting global checkout conversion rate by 2.4%.",
-        "Utilized data dashboards to identify drop-off funnels, spearheading dynamic routing logic to reduce card abandonment rate by 14%."
+        "Orchestrated strategic delivery of high-speed transit digital infrastructure packages valued at 45M SAR in accordance with Vision 2023 acceleration goals.",
+        "Managed a diverse team of 24+ consultants and local engineers, raising the team's localization (Saudization) quota to Platinum status in under 12 months.",
+        "Instituted real-time digital KPI tracking dashboards across 8 concurrent giga-project operations, reducing progress-reporting latency from 5 days to 2 hours."
       ]
     },
     {
       id: "exp_2",
-      company: "Optimizely",
-      role: "Product Manager - Analytics & Growth",
-      location: "San Francisco, CA",
+      company: "Saudi Telecom Company (stc)",
+      role: "Senior Project Manager - Digital Enablement",
+      location: "Riyadh, Saudi Arabia",
       startDate: "Aug 2020",
-      endDate: "Oct 2022",
+      endDate: "Oct 2023",
       current: false,
       bulletPoints: [
-        "Directed core A/B experiment engine features serving 800+ enterprise customers with millions of daily sessions.",
-        "Initiated modular drag-and-drop feature generator resulting in $1.2M in annual contract value (ACV) retention improvement."
+        "Led cross-functional digital onboarding frameworks for Ministry-level SaaS client integrations, securing 18M SAR in annual contract retention value.",
+        "Directly negotiated service level agreements with domestic tech developers, reducing vendor-associated operational leakage by 14%."
       ]
     }
   ],
   education: [
     {
       id: "edu_1",
-      institution: "Stanford University",
+      institution: "King Fahd University of Petroleum and Minerals (KFUPM)",
       degree: "B.S.",
-      fieldOfStudy: "Management Science and Engineering",
-      location: "Stanford, CA",
+      fieldOfStudy: "Systems Engineering & Operations Research",
+      location: "Dhahran, Saudi Arabia",
       startDate: "2016",
       endDate: "2020",
-      gpa: "3.85",
-      description: "Focus on Decision Analysis & Technology Entrepreneurship. Graduation with Honors."
+      gpa: "3.89 / 4.0",
+      description: "Graduated with First-Class Honors. Focused on Enterprise Operations Research and Project Portfolio Management. Active member of Saudi Council of Engineers (SCE)."
     }
   ],
-  skills: ["Product Strategy", "Agile Roadmap", "SaaS Analytics", "User Experience (UX)", "A/B Testing", "API Integrations", "SQL", "Team Leadership"],
+  skills: [
+    "Saudi Vision 2030 Alignment", "PMO Governance", "Budget Controls (SAR)", 
+    "Saudization Programs", "Bilingual (English/Arabic)", "Agile Delivery (PMP/Scrum)", 
+    "Qiwa & HRSD Portal Integration", "Stakeholder Management", "Risk Mitigation", 
+    "Oracle Primavera P6"
+  ],
   skillCategories: [
     {
-      category: "Product Leadership",
-      skills: ["Product Strategy", "Agile Roadmap", "SaaS Analytics", "A/B Testing"]
+      category: "Strategic Leadership",
+      skills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Stakeholder Management", "Saudization Programs"]
     },
     {
-      category: "Technical & Tools",
-      skills: ["SQL", "API Integrations", "Figma", "Amplitude", "Jira"]
+      category: "Technical & Systems",
+      skills: ["Oracle Primavera P6", "Budget Controls (SAR)", "Qiwa & HRSD Portal Integration", "Bilingual (English/Arabic)"]
     }
   ],
   certifications: [
     {
       id: "cert_1",
-      title: "Certified Scrum Product Owner (CSPO)",
-      issuer: "Scrum Alliance",
+      title: "Project Management Professional (PMP)",
+      issuer: "Project Management Institute (PMI)",
       date: "2021",
-      description: ""
+      description: "License #2893845"
+    },
+    {
+      id: "cert_2",
+      title: "Certified Professional Engineer (Consultant Grade)",
+      issuer: "Saudi Council of Engineers (SCE)",
+      date: "2022",
+      description: "License #395342"
     }
   ],
   projects: [
     {
       id: "proj_1",
-      title: "OmniChannel Campaign Tracker",
-      role: "Product Lead / Creator",
-      link: "omnichanneltracker.example.com",
-      description: "An open-source analytics dashboard designed to aggregate and forecast social media click-through attribution models securely."
+      title: "National Digital Services Portal Sync",
+      role: "Strategic Program Lead",
+      link: "mygov-sync.sa",
+      description: "Successfully integrated municipal utility workflows into the single-sign-on government hub, boosting automated service processing velocity by 44%."
     }
   ],
-  languages: ["English (Native)", "Spanish (Conversational)"]
+  languages: ["Arabic (Native)", "English (Professional)"]
 };
 
 const sampleAtsAnalysis: AtsAnalysis = {
-  score: 84,
-  grade: "A-",
-  summary: "This CV is exceptionally structured, with great use of action verbs and readable layout frameworks. However, adding more performance indicators and targeting specific software suite keywords will instantly elevate this to a top 5% candidate tier.",
-  formattingScore: 92,
-  contentScore: 81,
-  keywordScore: 78,
-  impactScore: 85,
+  score: 87,
+  grade: "A",
+  summary: "This CV is exceptionally matched with the Saudi Arabia recruitment requirements, expressing phenomenal alignment with Vision 2030 implementation guidelines and appropriate engineering registrations. Strengthening local governmental tracking keywords will make this CV pass regional ATS filters instantly.",
+  formattingScore: 94,
+  contentScore: 86,
+  keywordScore: 82,
+  impactScore: 88,
   tips: [
     {
       category: "Keywords",
       severity: "high",
-      tip: "We noticed 'Kubernetes' and 'AWS API Gateway' are missing, whereas they are high-demand keywords in current PM & technical role descriptors.",
-      exampleFix: "Integrate into experience: 'Spearheaded migration to microservices on AWS, reducing container deployment costs by 15%'"
+      tip: "We noticed 'Mudad Platform' and 'SCE Consultant Stamp' are missing, which are highly requested tags in Saudi Ministry and semi-government bidding portfolios.",
+      exampleFix: "Integrate into experience: 'Supervised client payments and wage compliance in accordance with Saudi Labor Law using Mudad portal API.'"
     },
     {
       category: "Impact",
       severity: "medium",
-      tip: "Include at least one more financial or cost-saving business metric in previous positions to highlight bottom-line accountability.",
-      exampleFix: "Change 'Streamlined operational tasks' to 'Streamlined operations using automated workflows, reclaiming 12 dev-hours weekly.'"
+      tip: "Incorporate financial performance indicators using Saudi Riyal (SAR) variables to strengthen bottom-line management authority.",
+      exampleFix: "Change 'Managed high budgets' to 'Administered a 12.5M SAR project portfolio under strict Saudi Ministry auditing parameters.'"
     },
     {
       category: "Formatting",
       severity: "low",
-      tip: "Your physical email address details are long. Consider keeping only the City and State (e.g. 'San Francisco, CA') to keep header crisp and clean on smaller displays.",
-      exampleFix: "Change '+1 (415) 882-9012, sarah.jenkins@example.com, SF CA 94103' to 'San Francisco, CA'"
+      tip: "Include your Saudi Council of Engineers (SCE) registration level alongside your email to demonstrate immediate eligibility for local engineering mandates.",
+      exampleFix: "Beside location header, include 'Registered Consultant Engineer - SCE #395342'"
     }
   ],
-  extractedKeywords: ["Product Strategy", "SaaS", "A/B Testing", "Agile", "API", "onboarding", "conversion rate", "SQL"],
-  suggestedKeywords: ["Python", "Jira & Confluence", "KPI Dashboards", "Cross-functional Collaboration", "Stripe API", "Go-To-Market (GTM) Strategy"]
+  extractedKeywords: ["Saudi Vision 2030 Alignment", "PMO Governance", "Budget Controls (SAR)", "Saudization Programs", "Bilingual (English/Arabic)", "PMP", "Saudi Council of Engineers"],
+  suggestedKeywords: ["Mudad System", "National Information Center (NIC)", "GOSI Compliance", "Giga-Project Lifecycle", "Public Investment Fund (PIF) Guidelines"]
 };
 
 const sampleCoverLetter: CoverLetter = {
-  companyName: "Stripe",
-  jobTitle: "Senior Product Manager",
-  salutation: "Dear Hiring Team at Stripe,",
-  introduction: "I am writing with great enthusiasm to submit my application for the Senior Product Manager position. With over six years of experience managing SaaS scale initiatives and launching API-focused monetization widgets, I am confident I can immediately contribute to your high-performance growth engineering goals.",
+  companyName: "NEOM",
+  jobTitle: "Director of Infrastructure Delivery (PMO)",
+  salutation: "Dear Hiring Committee at NEOM,",
+  introduction: "I am writing with great enthusiasm to submit my professional candidacy for the Director of Infrastructure Delivery post within the NEOM PMO division. With over eight years of experience steering digital-first infrastructure assets in the Kingdom of Saudi Arabia, I am prepared to directly contribute to the realization of NEOM's regional transformation goals.",
   bodyParagraphs: [
-    "In my recent role at Optimizely, I presided over key growth funnels and directed the modular experiment structures serving over 800+ enterprise partners. I specialized in optimizing user experiences on checkout pathways, driving retention up by $1.2M in annual contract value.",
-    "Furthermore, my background in Management Science and Engineering from Stanford has equipped me with both raw technical analytical vigor and high-level strategy skills. I excel at converting loose stakeholder requirements into highly structured products and working side-by-side with engineers to test, ship, and iterate."
+    "In my tenure leading PMO frameworks for Saudi Telecom Company (stc), I directed digital enablement packages that successfully automated ministerial integrations, securing over 18M SAR in local economic value. This taught me how to coordinate complex domestic developments and optimize delivery pipelines under direct Vision 2030 compliance structures.",
+    "Furthermore, my foundational Systems Engineering training from King Fahd University of Petroleum and Minerals (KFUPM) provides me with both state-of-the-art technical optimization tools and strict budget-control prowess. I hold a Consultant Engineer grade status at the Saudi Council of Engineers (SCE) and have dedicated my career to driving high-performance, platinum-level Saudi national recruitment."
   ],
-  conclusion: "Thank you for your time and premium consideration. I look forward to the prospect of discussing how my analytics background meshes beautifully with Stripe's future roadmap.",
-  signOff: "Sincerely,\nSarah M. Jenkins",
-  fullLetter: "Dear Hiring Team at Stripe,\n\nI am writing with great enthusiasm to submit my application for the Senior Product Manager position. With over six years of experience managing SaaS scale initiatives and launching API-focused monetization widgets, I am confident I can immediately contribute to your high-performance growth engineering goals.\n\nIn my recent role at Optimizely, I presided over key growth funnels and directed the modular experiment structures serving over 800+ enterprise partners. I specialized in optimizing user experiences on checkout pathways, driving retention up by $1.2M in annual contract value.\n\nFurthermore, my background in Management Science and Engineering from Stanford has equipped me with both raw technical analytical vigor and high-level strategy skills. I excel at converting loose stakeholder requirements into highly structured products and working side-by-side with engineers to test, ship, and iterate.\n\nThank you for your time and premium consideration. I look forward to the prospect of discussing how my analytics background meshes beautifully with Stripe's future roadmap.\n\nSincerely,\nSarah M. Jenkins"
+  conclusion: "Thank you for your valuable time and considerations. I look forward to the prospect of meeting in Riyadh or Tabuk to discuss how my local giga-project execution experience aligns beautifully with NEOM's rapid rollout demands.",
+  signOff: "With respect and dynamic thanks,\nEng. Faisal Al-Harbi",
+  fullLetter: "Dear Hiring Committee at NEOM,\n\nI am writing with great enthusiasm to submit my professional candidacy for the Director of Infrastructure Delivery post within the NEOM PMO division. With over eight years of experience steering digital-first infrastructure assets in the Kingdom of Saudi Arabia, I am prepared to directly contribute to the realization of NEOM's regional transformation goals.\n\nIn my tenure leading PMO frameworks for Saudi Telecom Company (stc), I directed digital enablement packages that successfully automated ministerial integrations, securing over 18M SAR in local economic value. This taught me how to coordinate complex domestic developments and optimize delivery pipelines under direct Vision 2030 compliance structures.\n\nFurthermore, my foundational Systems Engineering training from King Fahd University of Petroleum and Minerals (KFUPM) provides me with both state-of-the-art technical optimization tools and strict budget-control prowess. I hold a Consultant Engineer grade status at the Saudi Council of Engineers (SCE) and have dedicated my career to driving high-performance, platinum-level Saudi national recruitment.\n\nThank you for your valuable time and considerations. I look forward to the prospect of meeting in Riyadh or Tabuk to discuss how my local giga-project execution experience aligns beautifully with NEOM's rapid rollout demands.\n\nWith respect and dynamic thanks,\nEng. Faisal Al-Harbi"
 };
 
 const defaultSampleJobs: JobOpening[] = [
   {
     id: "job_1",
-    title: "Senior Technical Product Manager",
-    company: "Vercel Inc.",
-    location: "Remote (USA)",
-    salary: "$150,000 - $190,000",
-    type: "Full-time",
-    matchPercentage: 96,
-    matchingSkills: ["Product Strategy", "API Integrations", "Agile Roadmap", "A/B Testing"],
-    description: "Lead product execution for Vercel's edge network APIs. Work closely with design and DX folks to scale real-time visual tools.",
-    howToApply: "Optimize your professional summary with key latency metrics and click easy apply!"
+    title: "Senior Director of PMO Delivery",
+    company: "NEOM Authority",
+    location: "NEOM, Saudi Arabia (Hybrid)",
+    salary: "45,000 SAR - 55,000 SAR / Month",
+    type: "Full-time (Saudization)",
+    matchPercentage: 97,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Budget Controls (SAR)", "Stakeholder Management"],
+    description: "Orchestrate multi-disciplinary project coordinators working on smart community systems. Ensure absolute alignment of milestone logs with national tracking systems.",
+    howToApply: "Optimize your professional experience with Saudi Council of Engineers license numbers and apply!",
+    source: "NEOM Careers Portal",
+    expiryDate: "2026-08-30"
   },
   {
     id: "job_2",
-    title: "Lead Growth Product Manager",
-    company: "Retool",
-    location: "San Francisco, CA (Hybrid)",
-    salary: "$165,000 - $210,000",
+    title: "Digital Transformation Officer",
+    company: "Riyadh Municipal Authority",
+    location: "Riyadh, Saudi Arabia",
+    salary: "30,000 SAR - 38,000 SAR / Month",
     type: "Full-time",
     matchPercentage: 92,
-    matchingSkills: ["SaaS Analytics", "User Experience (UX)", "A/B Testing", "SQL"],
-    description: "Own the customer onboarding funnels, building robust features that empower non-technical users to design high-utility products in minutes.",
-    howToApply: "Generate a custom Stripe integration pitch cover letter with Coach and submit dynamically."
+    matchingSkills: ["Qiwa & HRSD Portal Integration", "Bilingual (English/Arabic)", "Agile Delivery (PMP/Scrum)"],
+    description: "Oversee automated municipal utility licensing portals and drive integrations with the Ministry of Human Resources and Social Development frameworks.",
+    howToApply: "Generate a custom, respectful Saudi format Pitch Letter via AI Career Coach and dispatch.",
+    source: "LinkedIn",
+    expiryDate: "2026-07-25"
+  },
+  {
+    id: "job_3",
+    title: "Project Portfolio Manager",
+    company: "Saudi Aramco",
+    location: "Dhahran, Saudi Arabia",
+    salary: "40,000 SAR - 50,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 95,
+    matchingSkills: ["Budget Controls (SAR)", "PMO Governance", "Risk Mitigation", "Oracle Primavera P6"],
+    description: "Coordinate enterprise asset infrastructure delivery schedules and implement strict contingency mitigation policies to streamline capital investments.",
+    howToApply: "Apply directly on Aramco e-Recruiting systems, highlighting active SCE consultant grades.",
+    source: "Aramco e-Recruiting",
+    expiryDate: "2026-09-15"
+  },
+  {
+    id: "job_4",
+    title: "Strategic Partnerships Director",
+    company: "Public Investment Fund (PIF)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "55,000 SAR - 70,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 91,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "Stakeholder Management", "Bilingual (English/Arabic)"],
+    description: "Lead deal enablement and execution protocols with commercial developers and local stakeholders to drive national giga-project synergy.",
+    howToApply: "Email your personalized cover letter directly to PIF Recruiting Hub or apply via PIF Web portal.",
+    source: "PIF Careers Website",
+    expiryDate: "2026-08-01"
+  },
+  {
+    id: "job_5",
+    title: "Senior Cloud Infrastructure Engineer",
+    company: "stc (Saudi Telecom Company)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "28,000 SAR - 35,000 SAR / Month",
+    type: "Full-time / Hybrid",
+    matchPercentage: 89,
+    matchingSkills: ["Qiwa & HRSD Portal Integration", "Stakeholder Management"],
+    description: "Scale local cloud enablement initiatives for government client accounts. Spearhead private-public integrations ensuring absolute regulatory adherence.",
+    howToApply: "Submit application via stc Talented Portal, appending your localized technical resume.",
+    source: "stc Talent Portal",
+    expiryDate: "2026-07-31"
+  },
+  {
+    id: "job_6",
+    title: "Director of Saudization & Talent Development",
+    company: "SABIC",
+    location: "Jubail, Saudi Arabia",
+    salary: "35,000 SAR - 45,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 94,
+    matchingSkills: ["Saudization Programs", "Stakeholder Management", "Bilingual (English/Arabic)"],
+    description: "Formulate regional human resource policies to attract and upskill young Saudi professionals, aligning capability development with SABIC industrial milestones.",
+    howToApply: "Submit digital portfolio via SABIC Global Opportunities portal.",
+    source: "SABIC Careers",
+    expiryDate: "2026-08-20"
+  },
+  {
+    id: "job_7",
+    title: "Senior Hospitality Development Manager",
+    company: "Red Sea Global",
+    location: "Tabuk Region, Saudi Arabia",
+    salary: "42,000 SAR - 52,000 SAR / Month",
+    type: "Full-time (On-Site)",
+    matchPercentage: 88,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Budget Controls (SAR)"],
+    description: "Direct elite luxury resort structural packages and monitor general contractor timelines to secure world-class eco-tourism milestones.",
+    howToApply: "Register and apply via the Red Sea Global Giga-careers console.",
+    source: "Red Sea Global Portal",
+    expiryDate: "2026-08-10"
+  },
+  {
+    id: "job_8",
+    title: "Corporate Governance Specialist",
+    company: "Al Rajhi Bank",
+    location: "Riyadh, Saudi Arabia",
+    salary: "25,000 SAR - 32,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 90,
+    matchingSkills: ["PMO Governance", "Stakeholder Management", "Bilingual (English/Arabic)"],
+    description: "Align internal retail banking governance models with Saudi Central Bank (SAMA) compliance systems and track risk vectors.",
+    howToApply: "Utilize Al Rajhi Instant Apply on LinkedIn, highlighting bilingual administrative skills.",
+    source: "LinkedIn",
+    expiryDate: "2026-07-18"
+  },
+  {
+    id: "job_9",
+    title: "Director of Heritage Projects PMO",
+    company: "Diriyah Gate Development Authority (DGDA)",
+    location: "Diriyah, Saudi Arabia",
+    salary: "48,000 SAR - 58,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 93,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Budget Controls (SAR)", "Stakeholder Management"],
+    description: "Oversee the restoration and luxury infrastructure integration of the historic Diriyah site. Maintain architectural compliance with royal commission guidelines.",
+    howToApply: "Send application with a Vision-aligned cover letter via DGDA careers system.",
+    source: "Diriyah Gate Careers Portal",
+    expiryDate: "2026-09-05"
+  },
+  {
+    id: "job_10",
+    title: "Smart Transit System Architect",
+    company: "Royal Commission for Riyadh City (RCRC)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "38,000 SAR - 46,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 87,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "Oracle Primavera P6", "Risk Mitigation"],
+    description: "Design transit control integrations for the Riyadh Metro ecosystem, ensuring automated ticketing pipelines connect seamlessly with central servers.",
+    howToApply: "Submit CV detailing large-scale municipal infrastructure integrations to RCRC career team.",
+    source: "RCRC Careers Website",
+    expiryDate: "2026-08-15"
+  },
+  {
+    id: "job_11",
+    title: "Digital Services Delivery Director",
+    company: "Ministry of Communications & IT (MCIT)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "34,000 SAR - 42,000 SAR / Month",
+    type: "Full-time (Saudization)",
+    matchPercentage: 96,
+    matchingSkills: ["Qiwa & HRSD Portal Integration", "Bilingual (English/Arabic)", "Saudi Vision 2030 Alignment"],
+    description: "Spearhead civic ecosystem upgrades to unify inter-ministerial databases. Supervise execution checkpoints for regional web platform rollouts.",
+    howToApply: "Apply through the Unified National Career Portal (Jadarat) or directly at MCIT recruitment desks.",
+    source: "Jadarat (National Portal)",
+    expiryDate: "2026-07-30"
+  },
+  {
+    id: "job_12",
+    title: "Public Realm Project Manager",
+    company: "King Salman Park Foundation",
+    location: "Riyadh, Saudi Arabia",
+    salary: "32,000 SAR - 40,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 91,
+    matchingSkills: ["PMO Governance", "Budget Controls (SAR)", "Stakeholder Management"],
+    description: "Supervise massive green lung landscape delivery packages. Coordinate civil engineering firms to optimize site productivity and reduce logistics overheads.",
+    howToApply: "Apply on the King Salman Park portal using optimized executive credentials.",
+    source: "King Salman Park Careers",
+    expiryDate: "2026-08-25"
+  },
+  {
+    id: "job_13",
+    title: "Giga-Project PMO Advisor",
+    company: "Qiddiya Investment Company",
+    location: "Qiddiya, Saudi Arabia",
+    salary: "46,000 SAR - 56,000 SAR / Month",
+    type: "Full-time (Hybrid)",
+    matchPercentage: 95,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Oracle Primavera P6", "Budget Controls (SAR)"],
+    description: "Advise senior executive panels on development risks and capital workflows for the premium theme-park and gaming district zones.",
+    howToApply: "Apply through Qiddiya's digital talent portal, attaching SCE consultant certification.",
+    source: "Qiddiya Portal",
+    expiryDate: "2026-09-10"
+  },
+  {
+    id: "job_14",
+    title: "FinTech Compliance Officer",
+    company: "Saudi National Bank (SNB)",
+    location: "Jeddah, Saudi Arabia",
+    salary: "24,000 SAR - 30,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 86,
+    matchingSkills: ["PMO Governance", "Bilingual (English/Arabic)"],
+    description: "Manage domestic clearing regulatory controls for SNB digital wallet programs in complete compliance with financial stability frameworks.",
+    howToApply: "Submit structured CV on SNB recruitment systems, adding GOSI reference numbers.",
+    source: "SNB Careers Website",
+    expiryDate: "2026-08-05"
+  },
+  {
+    id: "job_15",
+    title: "Program Integration Lead",
+    company: "National Information Center (NIC)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "36,000 SAR - 44,000 SAR / Month",
+    type: "Full-time (Saudization Program)",
+    matchPercentage: 92,
+    matchingSkills: ["Qiwa & HRSD Portal Integration", "Bilingual (English/Arabic)", "Stakeholder Management"],
+    description: "Coordinate data consolidation programs linked with National SSO Absher components. Drive robust safety verification schemas with regional agencies.",
+    howToApply: "Utilize government platform portals or apply direct to NIC digital services division.",
+    source: "Jadarat (National Portal)",
+    expiryDate: "2026-07-28"
+  },
+  {
+    id: "job_16",
+    title: "Senior Logistics Infrastructure Manager",
+    company: "Ma'aden (Saudi Arabian Mining Company)",
+    location: "Ras Al-Khair, Saudi Arabia",
+    salary: "33,000 SAR - 41,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 89,
+    matchingSkills: ["Budget Controls (SAR)", "Risk Mitigation", "Oracle Primavera P6"],
+    description: "Lead supply chain terminal delivery pipelines for mineral shipping components. Drive operations aligned with domestic logistics expansion metrics.",
+    howToApply: "Apply via Ma'aden corporate careers portal under Saudi Technical Career Program.",
+    source: "Ma'aden Careers Portal",
+    expiryDate: "2026-08-18"
+  },
+  {
+    id: "job_17",
+    title: "Smart District PMO Manager",
+    company: "King Abdullah Financial District (KAFD)",
+    location: "Riyadh, Saudi Arabia",
+    salary: "38,000 SAR - 48,005 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 93,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "PMO Governance", "Stakeholder Management", "Budget Controls (SAR)"],
+    description: "Coordinate premium prop-tech and asset monetization packages in the KAFD high-rise financial zone. Direct multi-party engineering boards.",
+    howToApply: "Submit application to KAFD executive talent pipeline highlighting PMP credentials.",
+    source: "KAFD Careers Website",
+    expiryDate: "2026-08-31"
+  },
+  {
+    id: "job_18",
+    title: "Operations Strategy Consultant",
+    company: "Ministry of Tourism",
+    location: "Riyadh, Saudi Arabia",
+    salary: "31,000 SAR - 39,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 90,
+    matchingSkills: ["Saudi Vision 2030 Alignment", "Bilingual (English/Arabic)", "Stakeholder Management"],
+    description: "Develop regulatory frameworks for private sector hotelier investments. Ensure integration with Saudization training initiatives.",
+    howToApply: "Send updated resume via Ministry Careers online platform.",
+    source: "Ministry of Tourism Portal",
+    expiryDate: "2026-08-01"
+  },
+  {
+    id: "job_19",
+    title: "Research Park Program Lead",
+    company: "KAUST (King Abdullah University of Science & Tech)",
+    location: "Thuwal, Saudi Arabia",
+    salary: "35,000 - 43,000 SAR / Month",
+    type: "Full-time (On-Site)",
+    matchPercentage: 87,
+    matchingSkills: ["Stakeholder Management", "Bilingual (English/Arabic)"],
+    description: "Nurture national startup acceleration programs within the KAUST tech incubator space. Manage foreign technical partnerships and domestic funding routes.",
+    howToApply: "Submit credentials directly to KAUST Human Capital Hub.",
+    source: "KAUST Careers Hub",
+    expiryDate: "2026-09-30"
+  },
+  {
+    id: "job_20",
+    title: "Senior Procurement Specialist",
+    company: "Amaala",
+    location: "Red Sea Coast, Saudi Arabia",
+    salary: "30,000 SAR - 38,000 SAR / Month",
+    type: "Full-time",
+    matchPercentage: 88,
+    matchingSkills: ["Budget Controls (SAR)", "Stakeholder Management", "Risk Mitigation"],
+    description: "Oversee major supply sourcing and vendor contract verification for ultra-luxury wellness zones, maintaining strictly audited Saudi Riyal controls.",
+    howToApply: "Apply through the Red Sea Global / Amaala merged giga-portal system.",
+    source: "Red Sea Global Portal",
+    expiryDate: "2026-08-22"
   }
 ];
 
@@ -190,16 +458,17 @@ export default function App() {
   const [isAtsAnalyzing, setIsAtsAnalyzing] = useState(false);
 
   // Cover Letter states
-  const [clCompany, setClCompany] = useState("Target Corp");
-  const [clRole, setClRole] = useState("Senior Analyst");
-  const [clRecipient, setClRecipient] = useState("Hiring Lead");
+  const [clCompany, setClCompany] = useState("NEOM Authority");
+  const [clRole, setClRole] = useState("Director of Infrastructure Delivery (PMO)");
+  const [clRecipient, setClRecipient] = useState("Hiring Committee");
   const [clJobDesc, setClJobDesc] = useState("");
   const [coverLetter, setCoverLetter] = useState<CoverLetter>(sampleCoverLetter);
   const [isClGenerating, setIsClGenerating] = useState(false);
 
   // Suggested Jobs state
   const [suggestedJobs, setSuggestedJobs] = useState<JobOpening[]>(defaultSampleJobs);
-  const [jobLocationPref, setJobLocationPref] = useState("Remote / SF");
+  const [jobLocationPref, setJobLocationPref] = useState("Riyadh / NEOM");
+  const [jobCompanySizePref, setJobCompanySizePref] = useState<"all" | "corporate" | "medium" | "small">("all");
   const [isJobsGenerating, setIsJobsGenerating] = useState(false);
 
   // Career Coach chat state
@@ -209,7 +478,7 @@ export default function App() {
     {
       id: "msg_init",
       role: "assistant",
-      content: "Hello! I am **Elite Coach Pro**, your dedicated career strategist and resume optimization agent. Paste your raw draft history, ask me for tough mock interview preparation, or ask how to negotiate high-tier SaaS offers! How can I accelerate your professional path today?",
+      content: "Ahlan wa Sahlan! 🇸🇦 I am **Elite Coach Pro**, your dedicated career strategist and resume optimization advisor for the **Saudi Arabia market**. I specialize in aligning professional CVs with **Saudi Vision 2030** strategic goals, tailoring profiles for giga-projects (NEOM, Red Sea Global, stc, Aramco, Qiddiya), and navigating Saudization (Nitaqat) parameters, GOSI, Qiwa, and HRSD regulations. Ask me to refine your experience, draft a respectful cover letter, or run a mock interview! How can I accelerate your success in the Kingdom today?",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ]);
@@ -581,7 +850,8 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           resumeData,
-          preferredLocation: jobLocationPref
+          preferredLocation: jobLocationPref,
+          companySize: jobCompanySizePref
         })
       });
       if (!response.ok) throw new Error("Job parsing error.");
@@ -817,10 +1087,10 @@ export default function App() {
       {/* 1. TOP HEADER WITH THEME INSTRUCTIONS & CORE ACTION EXPORTS */}
       <header className="h-16 bg-slate-900 text-white flex items-center justify-between px-6 shrink-0 shadow-lg z-20 print:hidden">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center font-extrabold text-white text-lg shadow-sm">R</div>
+          <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center font-extrabold text-white text-lg shadow-sm">🇸🇦</div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tight">AI Resume <span className="text-indigo-400">Coach</span></span>
-            <span className="text-[10px] text-slate-400 font-mono">Precision Agent Pro v2.4</span>
+            <span className="text-lg font-bold tracking-tight">KSA Resume <span className="text-emerald-400">Coach</span></span>
+            <span className="text-[10px] text-slate-400 font-mono">Saudi Arabia Market Only</span>
           </div>
         </div>
 
@@ -830,7 +1100,7 @@ export default function App() {
             <button 
               id="tab-btn-editor"
               onClick={() => setActiveTab("preview")}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "preview" ? "bg-indigo-600/90 text-white shadow" : "text-slate-300 hover:text-white"}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "preview" ? "bg-emerald-600 text-white shadow" : "text-slate-300 hover:text-white"}`}
             >
               <FileText size={13} />
               <span>Resume Editor</span>
@@ -838,7 +1108,7 @@ export default function App() {
             <button 
               id="tab-btn-ats"
               onClick={() => setActiveTab("ats")}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "ats" ? "bg-indigo-600/90 text-white shadow" : "text-slate-300 hover:text-white"}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "ats" ? "bg-emerald-600 text-white shadow" : "text-slate-300 hover:text-white"}`}
             >
               <FileCheck2 size={13} />
               <span>ATS Audit</span>
@@ -849,7 +1119,7 @@ export default function App() {
             <button 
               id="tab-btn-cover"
               onClick={() => setActiveTab("cover")}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "cover" ? "bg-indigo-600/90 text-white shadow" : "text-slate-300 hover:text-white"}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "cover" ? "bg-emerald-600 text-white shadow" : "text-slate-300 hover:text-white"}`}
             >
               <BookOpen size={13} />
               <span>Cover Letter</span>
@@ -857,7 +1127,7 @@ export default function App() {
             <button 
               id="tab-btn-jobs"
               onClick={() => setActiveTab("jobs")}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "jobs" ? "bg-indigo-600/90 text-white shadow" : "text-slate-300 hover:text-white"}`}
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activeTab === "jobs" ? "bg-emerald-600 text-white shadow" : "text-slate-300 hover:text-white"}`}
             >
               <Briefcase size={13} />
               <span>Matched Jobs</span>
@@ -1635,50 +1905,79 @@ export default function App() {
                   <div className="flex justify-between items-center">
                     <div>
                       <h2 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                        <Briefcase size={18} className="text-indigo-600" />
+                        <Briefcase size={18} className="text-emerald-600" />
                         <span>Tailored Career Opportunities</span>
                       </h2>
                       <p className="text-slate-500 text-xs">
                         Simulated job postings matching your current categorized skills.
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <input 
-                        type="text" 
-                        value={jobLocationPref}
-                        onChange={(e) => setJobLocationPref(e.target.value)}
-                        className="bg-slate-50 border border-slate-250 p-1.5 rounded text-xs select-auto"
-                        placeholder="Remote / SF"
-                      />
-                      <button
-                        id="btn-discover-jobs"
-                        onClick={triggerJobSuggestions}
-                        disabled={isJobsGenerating}
-                        className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase tracking-wider text-[11px] px-3.5 py-2 rounded-lg"
-                      >
-                        Find Jobs
-                      </button>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div className="flex flex-col">
+                        <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Location Setting</span>
+                        <input 
+                          type="text" 
+                          value={jobLocationPref}
+                          onChange={(e) => setJobLocationPref(e.target.value)}
+                          className="bg-slate-50 border border-slate-250 p-1.5 rounded text-xs select-auto w-36"
+                          placeholder="Riyadh / NEOM"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Company Size/Category</span>
+                        <select
+                          value={jobCompanySizePref}
+                          onChange={(e) => setJobCompanySizePref(e.target.value as any)}
+                          className="bg-slate-50 border border-slate-250 p-1.5 rounded text-xs select-auto text-slate-700 min-w-[180px] h-[30px]"
+                        >
+                          <option value="all">All Tiers (SME & Corporates)</option>
+                          <option value="corporate">Giga-Projects & Corporates</option>
+                          <option value="medium">Medium Enterprises (MMEs)</option>
+                          <option value="small">Small Startups & Boutiques (SMEs)</option>
+                        </select>
+                      </div>
+                      <div className="flex flex-col justify-end pt-4">
+                        <button
+                          id="btn-discover-jobs"
+                          onClick={triggerJobSuggestions}
+                          disabled={isJobsGenerating}
+                          className="bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-400 text-white font-bold uppercase tracking-wider text-[11px] px-4 py-2 rounded-lg flex items-center gap-1.5 transition-colors h-[30px]"
+                        >
+                          {isJobsGenerating ? <RefreshCw size={11} className="animate-spin" /> : <Briefcase size={11} />}
+                          <span>Scrape & Match</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {suggestedJobs.map((job) => (
-                    <div key={job.id} className="bg-white rounded-xl border border-slate-200 p-5 flex flex-col justify-between hover:border-indigo-400 transition-colors shadow-sm">
+                    <div key={job.id} className="bg-white rounded-xl border border-slate-200 p-5 flex flex-col justify-between hover:border-emerald-400 transition-colors shadow-sm">
                       <div>
                         <div className="flex justify-between items-start gap-2">
                           <div>
                             <h3 className="font-bold text-sm text-slate-950">{job.title}</h3>
                             <p className="text-xs text-slate-600 font-medium">{job.company} &bull; {job.location}</p>
                           </div>
-                          <span className="bg-indigo-100 text-indigo-700 font-extrabold font-mono text-xs px-2.5 py-1 rounded-full shrink-0">
+                          <span className="bg-emerald-50 text-emerald-700 font-extrabold font-mono text-[10.5px] px-2.5 py-1 rounded-full shrink-0 border border-emerald-100/30 font-sans">
                             {job.matchPercentage}% Match
                           </span>
                         </div>
 
-                        <div className="flex items-center gap-2 mt-2">
+                        <div className="flex flex-wrap items-center gap-1.5 mt-2">
                           <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold font-sans">{job.type}</span>
-                          <span className="text-[10px] text-emerald-600 font-bold font-mono">{job.salary}</span>
+                          <span className="text-[10px] text-emerald-600 font-bold font-mono bg-emerald-50/50 px-2 py-0.5 rounded border border-emerald-100/30">{job.salary}</span>
+                          {job.source && (
+                            <span className="text-[10px] bg-sky-50 text-sky-700 px-2 py-0.5 rounded font-bold font-sans flex items-center gap-1 border border-sky-100/50">
+                              <LinkIcon size={10} /> {job.source}
+                            </span>
+                          )}
+                          {job.expiryDate && (
+                            <span className="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded font-bold font-sans flex items-center gap-1 border border-amber-100/50">
+                              <Calendar size={10} /> Expiry: {job.expiryDate}
+                            </span>
+                          )}
                         </div>
 
                         <p className="text-slate-650 text-xs mt-3 leading-relaxed">{job.description}</p>

@@ -107,6 +107,8 @@ export interface JobOpening {
   matchingSkills: string[];
   description: string;
   howToApply: string;
+  source?: string;
+  expiryDate?: string;
 }
 
 export interface ChatMessage {
