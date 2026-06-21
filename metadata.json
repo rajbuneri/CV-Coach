@@ -1,0 +1,6 @@
+{
+  "name": "AI Resume Coach",
+  "description": "An interactive AI agent to craft ATS-optimized CVs, write tailored cover letters, run mock interviews, and access career advisory chat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
